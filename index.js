@@ -67,7 +67,7 @@ server.post('/api/messages', (req, res) => {
     });
 });
 
-// Listen for incoming notifications and send proactive messages to users (US).
+// Listen for incoming notifications and send proactive messages to users.
 server.post('/api/notify', async (req, res, next) => {
     if (req.body && req.body.notification_text) {
         for (const conversationReference of Object.values(conversationReferences)) {
